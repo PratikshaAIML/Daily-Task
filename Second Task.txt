@@ -1,10 +1,10 @@
 # 1. Using input() function take one number from the user and using ternary operators check hether the number is even or odd.
 
 # Taking input from the user
-num = int(input("Enter a number: "))
+Number1 = int(input("Enter a number: "))
 
 # Using ternary operator to check if the number is even or odd
-result = "Even" if num % 2 == 0 else "Odd"
+result = "Even" if Number1 % 2 == 0 else "Odd"
 
 # Printing the result
 print(f"The number is {result}.")
