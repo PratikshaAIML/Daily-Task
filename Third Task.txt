@@ -1,0 +1,120 @@
+# Python program to check leap year
+
+# Taking input from the user
+year = int(input("Enter a year: "))
+
+# Checking if the year is a leap year
+if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+    print(f"{year} is a Leap Year.")
+else:
+    print(f"{year} is not a Leap Year.")
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Python Program to Find the Largest Among Three Numbers
+
+# Taking input from the user for three numbers
+Number1 = float(input("Enter the first number: "))
+Number2 = float(input("Enter the second number: "))
+Number3 = float(input("Enter the third number: "))
+
+# Finding the largest number
+if Number1 >= Number2 and Number1 >= Number3:
+    largest = Number1
+
+elif Number2 >= Number1 and Number2 >= Number3:
+    largest = Number2
+
+else:
+    largest = Number3
+
+# Printing the result
+print(f"The largest number is {largest}.")
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Python Program to Check if a Number is Positive, Negative or 0
+
+# Taking input from the user
+Number = float(input("Enter a number: "))
+
+# Checking the conditions
+if Number > 0:
+    print("The number is positive.")
+
+elif Number < 0:
+    print("The number is negative.")
+
+else:
+    print("The number is zero.")
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+"""A toy vendor supplies three types of toys: Battery Based Toys, Key-based Toys, and Electrical Charging Based Toys. The vendor gives a discount of 10% on orders for battery-based toys if the order is for more than Rs. 1000.On orders of more than Rs. 100 for key-based toys, a discount of 5% is given, and a discount of 10% is given on orders for electrical charging based toys of value more than Rs. 500. Assume that the numeric codes 1,2 and 3 are used for battery based toys, key-based toys, and electrical charging based toys respectively. Write a program that reads the product code and the order amount and prints out the net amount that the customer is required to pay after the discount."""
+
+# Taking input from the user
+product_code = int(input("Enter the product code (1 for Battery-Based Toys, 2 for Key-Based Toys, 3 for Electrical Charging-Based Toys): "))
+order_amount = float(input("Enter the order amount: "))
+
+# Applying discounts based on product code and order amount
+if product_code == 1:  # Battery-Based Toys
+    if order_amount > 1000:
+        discount = 0.10  # 10% discount
+    else:
+        discount = 0.0
+
+elif product_code == 2:  # Key-Based Toys
+    if order_amount > 100:
+        discount = 0.05  # 5% discount
+    else:
+        discount = 0.0
+
+elif product_code == 3:  # Electrical Charging-Based Toys
+    if order_amount > 500:
+        discount = 0.10  # 10% discount
+    else:
+        discount = 0.0
+
+else:
+    print("Invalid product code entered.")
+    discount = None
+
+# Calculate the net amount after discount
+if discount is not None:
+    discount_amount = order_amount * discount
+    net_amount = order_amount - discount_amount
+    print(f"Net amount to be paid after discount: Rs. {net_amount:.2f}")
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+"""5. A transport company charges the fare according to following table:
+Distance  Charges
+1-50 8    Rs./Km
+51-100    10 Rs./Km
+> 100     12 Rs/Km
+"""
+
+# Taking input from the user for distance
+distance = float(input("Enter the distance traveled (in km): "))
+
+# Calculating fare based on distance
+if distance >= 1 and distance <= 50:
+    fare = distance * 8  # 8 Rs. per Km for 1-50 km
+elif distance >= 51 and distance <= 100:
+    fare = distance * 10  # 10 Rs. per Km for 51-100 km
+elif distance > 100:
+    fare = distance * 12  # 12 Rs. per Km for more than 100 km
+else:
+    fare = 0
+    print("Invalid distance entered!")
+    
+# If the fare is calculated, print the fare
+if fare > 0:
+    print(f"The total fare for {distance} km is: Rs. {fare:.2f}")
+
+
+
+
+
+
+
