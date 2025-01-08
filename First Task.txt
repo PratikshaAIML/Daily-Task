@@ -1,12 +1,12 @@
 1. Calculate the multiplication and sum of two numbers 
 
 # Get input from the user
-num1 = float(input("Enter the first number: "))
-num2 = float(input("Enter the second number: "))
+Number1 = float(input("Enter the first number: "))
+Number2 = float(input("Enter the second number: "))
 
 # Calculate sum and multiplication
-sum_result = num1 + num2
-multiplication_result = num1 * num2
+sum_result = Number1 + Number2
+multiplication_result = Number1 * Number2
 
 # Print the results
 print("Sum:", sum_result)
@@ -16,11 +16,11 @@ print("Multiplication:", multiplication_result)
 2. Declare two variables and print that which variable is largest using ternary operators
 
 # Declare two variables
-num1 = int(input("Enter the first number: "))
-num2 = int(input("Enter the second number: "))
+Number1 = int(input("Enter the first number: "))
+Number2 = int(input("Enter the second number: "))
 
 # Find the largest number using ternary operator
-largest = num1 if num1 > num2 else num2
+largest = Number1 if Number1 > Number2 else Number2
 
 # Print the largest number
 print("The largest number is:", largest)
@@ -41,13 +41,13 @@ print(f"{celsius}°C is equal to {fahrenheit}°F")
 4. Python program to find the area of a triangle whose sides are given
 
 # Get the lengths of the three sides from the user
-a = float(input("Enter the length of the first side: "))
-b = float(input("Enter the length of the second side: "))
-c = float(input("Enter the length of the third side: "))
+Side1 = float(input("Enter the length of the first side: "))
+Side2 = float(input("Enter the length of the second side: "))
+Side3 = float(input("Enter the length of the third side: "))
 # Calculate the semi-perimeter
-s = (a + b + c) / 2
+s = (Side1 + Side2 + Side3) / 2
 # Calculate the area using Heron's formula
-area = (s * (s - a) * (s - b) * (s - c)) ** 0.5
+area = (s * (s - Side1) * (s - Side2) * (s - Side3)) ** 0.5
 # Print the area
 print(f"The area of the triangle is: {area:.2f}")
 
