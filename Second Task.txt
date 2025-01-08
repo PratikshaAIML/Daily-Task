@@ -1,0 +1,53 @@
+# 1. Using input() function take one number from the user and using ternary operators check hether the number is even or odd.
+
+# Taking input from the user
+num = int(input("Enter a number: "))
+
+# Using ternary operator to check if the number is even or odd
+result = "Even" if num % 2 == 0 else "Odd"
+
+# Printing the result
+print(f"The number is {result}.")
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+#Using input function take two number and then swap the number
+
+
+# Taking two numbers as input from the user
+Number1 = int(input("Enter the first number: "))
+Number2 = int(input("Enter the second number: "))
+
+# Swapping the numbers using a variable
+Number1, Number2 = Number2, Number1
+
+# Printing the swapped values
+print(f"After swapping: First number = {Number1}, Second number = {Number2}")
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Write a Program to Convert Kilometers to Miles
+
+# Taking input from the user for kilometers
+kilometers = float(input("Enter distance in kilometers: "))
+
+# Conversion factor: 1 kilometer = 0.621371 miles
+miles = kilometers * 0.621371
+
+# Printing the result
+print(f"{kilometers} kilometers is equal to {miles} miles.")
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Find the Simple Interest on Rs. 200 for 5 years at 5% per year.
+
+# Take input values for principal, rate, and time
+principal = float(input("Enter the principal amount (Rs.): "))
+rate = float(input("Enter the annual interest rate (%): "))
+time = float(input("Enter the time (years): "))
+
+# Calculate simple interest
+simple_interest = (principal * rate * time) / 100
+
+print(f"The Simple Interest on Rs. {principal} for {time} years at {rate}% is Rs. {simple_interest:.2f}.")
+
