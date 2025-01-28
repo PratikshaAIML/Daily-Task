@@ -1,0 +1,82 @@
+# Pattern :- 1
+
+# width of the Pattern
+j = 5  
+
+# Initialize the starting value for the row counter
+i = 1     
+
+# Loop to iterate through each row of the pattern
+while i <= 5:
+    
+    # Print spaces to create right alignment and then stars for the current row
+    # ' ' * (j - i) creates the leading spaces
+    # '*' * i creates the stars for the current row
+    print(' ' * (j - i) + '*' * i)
+    
+    # Increment the row counter to move to the next row
+    i = i + 1  
+ 
+ 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Pattern :- 2
+
+#total number of rows for the pattern
+r = 5
+
+# Initialize the starting value for the row counter
+i = 1  
+
+# Outer loop to iterate through each row
+while i <= 5:
+    
+    # Initialize an empty string to build the binary pattern for the current row
+    r = ""   
+    
+    # Initialize the column counter for the current row
+    j = 1
+    
+    # Inner loop to construct the binary pattern for the current row
+    while j <= i:
+        if j % 2 == 1:  
+            r = r + "1"  
+        else:
+            r = r + "0"  
+        j = j + 1  
+    
+    
+    print(r)
+    
+    # Increment the row counter to move to the next row
+    i = i + 1  
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Pattern :- 3
+
+# Number of rows in the pattern
+rows = 5
+i = rows 
+
+# Loop through rows
+while i >= 1:
+    # Print spaces to align the pattern
+    spaces = ' ' * (rows - i)
+    
+    # Build the row pattern of 1s and 0s
+    j = 1
+    row = ""
+    while j <= i:
+        if j % 2 == 1:  # For odd positions, add '1'
+            row += "1"
+        else:           # For even positions, add '0'
+            row += "0"
+        j += 1
+    
+    # Print the spaces and the row pattern
+    print(spaces + row)
+    
+    # Move to the next row (decrease row size)
+    i -= 1
+ 
+  
