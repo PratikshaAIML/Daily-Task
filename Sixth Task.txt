@@ -1,0 +1,70 @@
+# 1. Write a Python program to count the occurrences of each word in a given sentence string = “To change the overall look of your document. To change the look available in the gallery”
+
+# Take input from the user
+sentence = input("Enter a sentence: ")
+
+# Convert the sentence to lowercase and split it into words
+words = sentence.lower().split()
+
+# Create a dictionary to store word counts
+word_counts = {}
+
+# Count the occurrences of each word
+for word in words:
+    word_counts[word] = word_counts.get(word, 0) + 1
+
+# Print the word counts
+print("\nWord occurrences:")
+for word, count in word_counts.items():
+    print(f"{word}: {count}")
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# 2. Write a Python program to remove a newline in Python String = "\nBest \nDeeptech \nPython \nTraining\n"
+
+# Define the string with newlines
+string = "\nBest \nDeeptech \nPython \nTraining\n"
+
+# Remove all newline characters
+result = string.replace("\n", "")
+
+
+print("String without newlines:")
+print(result)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# 3. Write a Python program to reverse words in a string String = “Deeptech Python Training”
+
+# Take input from the user
+string = input("Enter a string: ")
+
+# Split the string into words, reverse the words, and join them back together
+reversed_string = " ".join(string.split()[::-1])
+
+print("\nReversed string:")
+print(reversed_string)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# 4. Write a Python program to count and display the vowels of a given text String=”Welcome to python Training”
+
+# Take input from the user
+text = input("Enter a string: ")
+
+# Define vowels
+vowels = "aeiouAEIOU"
+
+# Initialize a counter for vowels
+vowel_count = 0
+
+# Find and count vowels in the text
+found_vowels = [char for char in text if char in vowels]
+vowel_count = len(found_vowels)
+
+# Display the results
+print("\nVowels in the string:", found_vowels)
+print(f"Number of vowels: {vowel_count}")
+
+
+
