@@ -1,0 +1,114 @@
+# 1. Write a Python program to sum all the items in a list. 
+
+# Take input from the user
+numbers = input("Enter numbers separated by commas: ")
+
+# Convert the input string into a list of integers
+num_list = [int(num) for num in numbers.split(',')]
+
+# Calculate the sum of the list
+total_sum = sum(num_list)
+
+print("The sum of the numbers is:", total_sum)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# 2. Write a Python program to get the largest and smallest number from a list without builtin functions. 
+
+# Take input from the user 
+numbers = input("Enter numbers separated by commas: ")
+
+# Convert the input string into a list of integers
+num_list = [int(num) for num in numbers.split(',')]
+
+# Initialize min and max with the first element of the list
+smallest = num_list[0]
+largest = num_list[0]
+
+# Iterate through the list to find the smallest and largest number
+for num in num_list:
+    if num < smallest:
+        smallest = num
+    if num > largest:
+        largest = num
+
+print("Smallest number is:", smallest)
+print("Largest number is:", largest)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# 3. Write a Python program to find duplicate values from a list and display those. 
+
+# Take input from the user 
+numbers = input("Enter numbers separated by commas: ")
+
+# Convert the input string into a list of integers
+num_list = [int(num) for num in numbers.split(',')]
+
+# Create an empty list to store duplicates
+duplicates = []
+
+# Iterate through the list to find duplicates
+for i in range(len(num_list)):
+    for j in range(i + 1, len(num_list)):  # Compare with the next elements
+        if num_list[i] == num_list[j] and num_list[i] not in duplicates:
+            duplicates.append(num_list[i])  # Add to the duplicate list
+
+if duplicates:
+    print("Duplicate values are:", duplicates)
+else:
+    print("No duplicate values found.")
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+'''4. Write a Python program to split a given list into two parts where the length of the first part of the list is given. 
+
+Original list: 
+[1, 1, 2, 3, 4, 4, 5, 1] 
+
+Length of the first part of the list: 3 
+
+Splitted the said list into two parts: 
+([1, 1, 2], [3, 4, 4, 5, 1])           '''
+
+# Take input from the user
+numbers = input("Enter numbers separated by commas: ")
+num_list = [int(num) for num in numbers.split(',')]  # Convert input into a list of integers
+
+# Take input for the length of the first part
+split_index = int(input("Enter the length of the first part: "))
+
+# Split the list manually
+first_part = num_list[:split_index]  # First 'split_index' elements
+second_part = num_list[split_index:]  # Remaining elements
+
+print("Splitted the list into two parts:", (first_part, second_part))
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+'''5. Write a Python program to traverse a given list in reverse order, and print the elements with the original index. 
+
+Original list:
+
+['red', 'green', 'white', 'black'] 
+
+Traverse the said list in reverse order:
+
+ black 
+
+white
+
+ green
+
+ red                                           '''
+
+
+# Take input from the user
+user_input = input("Enter list elements separated by commas: ")
+
+# Convert input string into a list
+color_list = [item.strip() for item in user_input.split(',')]
+
+# Traverse in reverse order and print elements
+for i in range(len(color_list) - 1, -1, -1):
+    print(color_list[i])
